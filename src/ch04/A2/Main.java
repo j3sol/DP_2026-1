@@ -13,5 +13,11 @@ public class Main {
         card1.use();
         card2.use();
         card3.use();
+
+        // 해시맵 테스트
+        IDCardFactory idCardFactory = (IDCardFactory) factory;
+        System.out.println("시리얼 번호와 오너 이름 대응표:");
+        idCardFactory.getOwners().forEach((serial, owner) ->
+            System.out.println("시리얼: " + serial + ", 오너: " + owner));
     }
 }
